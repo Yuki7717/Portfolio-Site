@@ -1,0 +1,1 @@
+const smoothScrollTrigger=document.querySelectorAll('a[href^="#"]');for(let e=0;e<smoothScrollTrigger.length;e++)smoothScrollTrigger[e].addEventListener("click",t=>{t.preventDefault();let o=smoothScrollTrigger[e].getAttribute("href");const r=document.getElementById(o.replace("#","")).getBoundingClientRect().top+window.pageYOffset-60;window.scrollTo({top:r,behavior:"smooth"})});

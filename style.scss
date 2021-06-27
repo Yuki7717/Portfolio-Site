@@ -1,0 +1,307 @@
+$cBlack: #222222;
+$cGray: #444444;
+$cWhite: #EEEEEE;
+
+body {
+    color: $cWhite;
+    background-color: $cGray;
+    font-family: "Kameron", "Noto Sans JP", sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: $cWhite;
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+#header {
+
+    #header-nav {
+        display: inline-block;
+        color: $cWhite;
+        background-color: $cBlack;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 56px;
+
+        .site-title {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+
+            a {
+                border: 1px solid black;
+                flex: 1;
+                display: inline-block;
+                text-align: center;
+                
+                &:hover {
+                    opacity: 0.7;
+                    cursor: pointer;
+
+                }
+
+                
+
+                i {
+                    padding-top: 5px;
+                }
+
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+#main {
+
+    #home {
+        width: 100%;
+        height: 100vh;
+
+        #home-title {
+            padding-top: 175px;
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+
+    #profile {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .sec-title {
+            text-align: center;
+            padding: 0 20px;
+            margin-bottom: 30px;
+            
+            p {
+                border-bottom: 2px solid $cWhite;
+                padding-bottom: 10px;
+            }
+        }
+
+        .profile-image {
+            display: block;
+            margin: 0 auto;
+            width: 330px;
+            border-radius: 50%;
+            margin-bottom: 50px;
+        }
+        .profile-info {
+            background-color: $cWhite;
+            color: #000;
+            margin: 0 30px;
+            padding: 30px 20px;
+            border-radius: 15px;
+
+            .name {
+                margin-bottom: 10px;
+                .name-title {
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    border-bottom: 1px solid #000;
+                    font-size: 20px;
+                }
+            }
+            
+            .profile-detail {
+                padding: 0 10px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    #skill {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+
+        .languages {
+            text-align: center;
+            display: flex;
+            background-color: $cWhite;
+            color: #000;
+            margin: 0 30px;
+            padding: 30px 20px;
+            border-radius: 15px;
+
+            li {
+                flex: 1;
+
+                p {
+                    border-bottom: 1px solid #000;
+                    padding-bottom: 10px;
+                    margin: 0 5px;
+                }
+
+                i {
+                    padding: 30px 10px 10px 10px;
+                }
+            }
+        }
+    }
+    
+    #work {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+
+        .portfolio {
+            text-align: center;
+            background-color: $cWhite;
+            color: #000;
+            margin: 0 30px;
+            padding: 30px 20px;
+            border-radius: 15px;
+
+            p {
+                border-bottom: 1px solid #000;
+            }
+
+            img {
+                border-radius: 15px;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+
+        .contact-details {
+            text-align: center;
+            background-color: $cWhite;
+            color: #000;
+            margin: 0 30px;
+            padding: 30px 20px;
+            border-radius: 15px;
+
+            ul {
+                flex-direction: column;
+                padding-top: 30px;
+
+                a {
+                    color: #000;   
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    text-align: center;
+    font-size: 12px;
+    height: 80px;
+}
+
+@media screen and  (min-width: 600px) {
+    #main {
+        #home h1 {
+            margin-bottom: 200px;
+            font-size: 100px;
+        }
+    }
+}
+
+@media screen and  (min-width: 900px) {
+    #header {
+
+        #header-nav {
+            background-color: $cBlack;
+            display: flex;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            .site-title {
+                flex: 1;
+                padding: 15px;
+                font-size: 25px;
+                display: inline-block;
+                color: $cWhite;
+
+                &:hover {
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+            }
+
+            .nav {
+                flex: 1;
+                
+                li {
+                    padding-top: 10px;
+                    display: block;
+                    border :none;
+
+                    &:hover {
+                        opacity: 0.7;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    #main {
+  
+        #profile {
+            padding-top:  100px;
+            
+            .profile-section {
+                display: flex;
+                margin: 200px;
+
+                .profile-image {
+                    flex: 1;
+                }
+
+                .profile-info {
+                    flex: 1;
+                }
+
+            }
+            
+            #skill {
+                margin-top: -100px;
+                padding-top:  100px;
+            }
+
+            #work {
+                padding-top: 100px;
+            }
+        }    
+    }
+
+    #footer {
+        margin-top: 30px;
+        height: 50px;
+    }
+    
+}
